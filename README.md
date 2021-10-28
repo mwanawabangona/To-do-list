@@ -1,17 +1,14 @@
-# microverse-awesome-books-project-one
+# microverse-todo-list-project
 
-> This project is on HTML + JAVASCRIPT. One can create a book, save it to the browsers local storage and can remove a specific book from the array and update the local storage.
-
-Awesome Books version 1     
-
-![](./images/awesome-books-v1.png)                             |
+> This project is on HTML CSS and JAVASCRIPT. this is a to do list structure project, which i implimented the earlier mentioned languages, and added the webpack.
+To do List    
 
 ## Built With
 
 - HTML CSS & JAVASCRIPT
 
 ## Link to online version
-[online version](https://mmsesay.github.io/awesome-books/)
+[online version](https://mwanawabangona.github.io/To-do-list/) Might not be available at the moment!!
 
 ## Authors
 
