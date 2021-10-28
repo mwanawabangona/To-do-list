@@ -23,10 +23,10 @@ ul > * {
 
 .container {
   width: 40rem;
-  box-shadow: 5px 5px 11px 1px rgba(151, 151, 151, 0.63)
+  box-shadow: 5px 5px 11px 1px rgba(151, 151, 151, 0.63);
 }
 
-i:before {
+i::before {
   font-size: 1.5rem;
   color: rgba(146, 146, 146, 0.664);
 }
