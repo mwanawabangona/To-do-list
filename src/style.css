@@ -68,8 +68,12 @@ i::before {
 }
 
 .item .task p {
-  padding-left: 1rem;
+  margin-left: 1rem;
   font-size: 1.3rem;
+}
+
+.item .task p:focus {
+  outline: none;
 }
 
 .task {
@@ -78,4 +82,13 @@ i::before {
 
 .task-complete {
   color: dodgerblue !important;
+}
+
+i {
+  cursor: pointer;
+}
+
+.linethrough {
+  text-decoration: line-through;
+  font-style: italic;
 }
