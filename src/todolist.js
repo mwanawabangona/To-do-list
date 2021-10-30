@@ -1,31 +1,10 @@
-export default class TodoList {
+export default class TodoList {a
   constructor() {
     const savedTasks = JSON.parse(localStorage.getItem('tasks'));
     if(savedTasks){
       this.tasks = savedTasks;
     }else{
-      this.tasks = [
-        {
-          description: 'task 1',
-          completed: false,
-          index: 1,
-        },
-        {
-          description: 'task 2',
-          completed: true,
-          index: 2,
-        },
-        {
-          description: 'test3',
-          completed: false,
-          index: 3,
-        },
-        {
-          description: 'test4',
-          completed: false,
-          index: 4,
-        },
-      ];
+      this.tasks = [];
     }
   }
 
