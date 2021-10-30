@@ -2,10 +2,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;top: 200px;
+  position: relative;
+
 }
 
 .d-flex {
@@ -111,6 +112,8 @@ span {
   align-items: center;
   height: 10%;
   cursor: pointer;
-  height: 45px;
-  font-size: medium;
+  font-size: large;
+  padding-top: 25px;
+  position: relative;
+  height: 25px;
 }
