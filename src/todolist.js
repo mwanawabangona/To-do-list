@@ -45,12 +45,20 @@ export default class TodoList {
           <i class="fa ${Done} update-status" job="complete" data="${task.index}"></i>
           <p class="ptag ${Line}" contenteditable="true"  data="${task.index}">${task.description}</p>
         </div>
-        <i class="fa fa-trash-o" job="delete"  data="${task.index}"></i>
+        <i class="fa fa-trash-o delete-task" job="delete"  data="${task.index}"></i>
       </li>
       `;
       taskSection.innerHTML += task_temp;
     });
     this.attachEvents();
+  }
+
+  addTask(task){
+    this.tasks.push({
+      description: task,
+      completed: false,
+      index: this.tasks.length
+    });
   }
 
   sortAndSave() {
@@ -74,8 +82,25 @@ export default class TodoList {
     }
     this.displayTasks();
   }
-  
+
+  deleteTask(index) {
+    this.tasks.splice(index-1, 1);
+    this.displayTasks();
+  }
+
+  editTask(newValue, index) {
+    this.tasks[index-1].description = newValue;
+    this.sortAndSave();
+  }
+
+  clearCompleted() {
+    const pendingTasks = this.tasks.filter((task) => task.completed === false);
+    this.tasks = pendingTasks;
+    this.sortAndSave();
+    this.displayTasks();
+  }
   attachEvents() {
+    // status update
     const listItems = document.querySelectorAll('.update-status');
     listItems.forEach((checkbox) => {
       checkbox.addEventListener('click', (e) => {
@@ -83,6 +108,27 @@ export default class TodoList {
         console.log(taskIndex);
         this.updateTaskStatus(taskIndex);
       });
-    })
+    });
+
+    // delete tasks
+    const activity = document.querySelectorAll('.delete-task');
+    activity.forEach((deleteIcon) => {
+      deleteIcon.addEventListener('click', (e) => {
+        const taskIndex = e.target.getAttribute('data');
+        this.deleteTask(taskIndex);
+      });
+    });
+
+    // edit tasks
+    const binIcons = document.querySelectorAll('.ptag');
+    binIcons.forEach((deleteIcon) => {
+      deleteIcon.addEventListener('input', (e) => {
+        const taskIndex = e.target.getAttribute('data');
+        const newValue = e.target.innerText;
+        this.editTask(newValue, taskIndex);
+      });
+    });
+    
+
   }
 }
