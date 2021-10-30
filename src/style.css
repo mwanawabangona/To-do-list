@@ -4,9 +4,9 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;top: 200px;
+  box-sizing: border-box;
+  top: 200px;
   position: relative;
-
 }
 
 .d-flex {
@@ -110,10 +110,9 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10%;
+  height: 20%;
   cursor: pointer;
   font-size: large;
   padding-top: 25px;
   position: relative;
-  height: 25px;
 }
