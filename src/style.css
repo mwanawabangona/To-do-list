@@ -80,6 +80,18 @@ i::before {
   align-items: center;
 }
 
+form input {
+  min-width: calc(100% - 30px);
+  line-height: 24px;
+  height: 35px;
+  outline: none;
+}
+
+form button {
+  border: 0 solid transparent;
+  background: #fff;
+}
+
 .task-complete {
   color: dodgerblue !important;
 }
@@ -91,4 +103,14 @@ i {
 .linethrough {
   text-decoration: line-through;
   font-style: italic;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  cursor: pointer;
+  height: 45px;
+  font-size: medium;
 }
