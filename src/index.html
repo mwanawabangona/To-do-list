@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" crossorigin="anonymous">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 </head>
+
 <body>
-  <section class="container">
-    <div class="header d-flex">
-      <h1>Today's ToDo-List</h1>
-      <i class="fa fa-refresh"></i>
-    </div>
-    <form id="form" class="d-flex">
-      <input type="text" id="input" name="new_task" placeholder="Add to your list...">
-      <button class="fa fa-level-down fa-rotate-90" type="submit" title="submit"></button>
-    </form>
-    <div class="task-container">
-      <ul class="task-list">
-      </ul>
-    </div>
-    <span id="clear-completed"> Clear all Completed</span>
-  </div>
+    <section class="form-section">
+        <form id="form" class="form-control">
+            <div class="header-wrap">
+                <h3 class="heading">ToDo App</h3>
+                <span class="syc"><i class="fas fa-sync"></i></span>
+            </div>
+            <div class="form-input">
+                <input type="text" name="text" id="text" placeholder="Add to your list..." class="italics" />
+                <button type="submit" class="add">+</button>
+            </div>
+
+            <ul class="container">
+            </ul>
+            <div class="clear">
+                <a href="#">Clear all completed task</a>
+            </div>
+        </form>
+    </section>
 </body>
-<script src="https://use.fontawesome.com/60c3c5e662.js" crossorigin="anonymous"></script>
+
 </html>
